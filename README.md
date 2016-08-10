@@ -52,3 +52,6 @@ environments/            contains environment-based overrides
 tests                    contains various tests for the advanced application
     codeception/         contains tests developed with Codeception PHP Testing Framework
 ```
+
+搭建 rabc 后台系列教程（一）—— 安装 yii2 和 composer
+http://www.getyii.com/topic/546
