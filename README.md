@@ -55,3 +55,15 @@ tests                    contains various tests for the advanced application
 
 搭建 rabc 后台系列教程（一）—— 安装 yii2 和 composer
 http://www.getyii.com/topic/546
+
+
+2、使用中国镜像：由于众所周知的原因，国外的网站连接速度很慢，并且随时可能被“墙”甚至“不存在”。
+
+进入 cmd，输入：
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+安装最新的Composer 资源插件
+
+进入 cmd，输入：composer global require "fxp/composer-asset-plugin:~1.1.1"
+
+注：更新 yii2 ，进入 cmd ，切换目录到 advanced，输入
+composer update yiisoft/yii2 yiisoft/yii2-composer bower-asset/jquery.inputmask
