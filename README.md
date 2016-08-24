@@ -67,3 +67,6 @@ composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
 注：更新 yii2 ，进入 cmd ，切换目录到 advanced，输入
 composer update yiisoft/yii2 yiisoft/yii2-composer bower-asset/jquery.inputmask
+
+3最简单的权限实现方法
+http://www.getyii.com/topic/585
