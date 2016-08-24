@@ -12,6 +12,9 @@ use common\models\LoginForm;
  */
 class SiteController extends Controller
 {
+    //public $layout = '@vendor/cszchen/alte/veiws/main-layout.php';
+    //public $layout = '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app/site/login.php';
+
     /**
      * @inheritdoc
      */

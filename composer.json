@@ -35,7 +35,19 @@
             "bower-asset-library": "vendor/bower"
         }
     },
+    "autoload": {
+        "psr-4": { "common\\": "common" }
+    },
     "scripts": {
-        "post-install-cmd": "php init --env=Development --overwrite=n"
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ],
+        "post-install-cmd": [
+            "common\\components\\ComposerInstaller::initProject"
+        ],
+        "post-update-cmd": [
+            "common\\components\\ComposerInstaller::initProject"
+        ]
     }
+
 }
