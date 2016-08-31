@@ -6,7 +6,7 @@
  * Time: 下午5:56
  */
 
-namespace common\modules\user\controllers;
+namespace backend\modules\user\controllers;
 
 
 use backend\modules\user\models\LoginForm;

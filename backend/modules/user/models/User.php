@@ -2,8 +2,8 @@
 
 namespace backend\modules\user\models;
 
-use common\models\Sign;
-use common\modules\user\traits\ModuleTrait;
+use backend\models\Sign;
+use backend\modules\user\traits\ModuleTrait;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
