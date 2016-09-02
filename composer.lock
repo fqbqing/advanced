@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93ef4c28e251bc93058a89987ec2f7df",
-    "content-hash": "628e339dea3392c55d406a1f99402302",
+    "hash": "728097cb6b72de7c598edb392918ac2f",
+    "content-hash": "0f7626d1bbddad493d8630b998cae45e",
     "packages": [
         {
             "name": "aferrandini/phpqrcode",
@@ -90,6 +90,117 @@
                 "web"
             ],
             "time": "2016-08-04 23:22:06"
+        },
+        {
+            "name": "bower-asset/blueimp-canvas-to-blob",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/JavaScript-Canvas-to-Blob.git",
+                "reference": "cb5add6fd18abba567c4824a601f57b9a9e30e04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Canvas-to-Blob/zipball/cb5add6fd18abba567c4824a601f57b9a9e30e04",
+                "reference": "cb5add6fd18abba567c4824a601f57b9a9e30e04",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
+            "name": "bower-asset/blueimp-file-upload",
+            "version": "9.12.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/jQuery-File-Upload.git",
+                "reference": "b9e144b735ab95a598b975bdc8375e14a2e76157"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/b9e144b735ab95a598b975bdc8375e14a2e76157",
+                "reference": "b9e144b735ab95a598b975bdc8375e14a2e76157",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/blueimp-canvas-to-blob": ">=2.1.1",
+                "bower-asset/blueimp-load-image": ">=1.13.0",
+                "bower-asset/blueimp-tmpl": ">=2.5.4",
+                "bower-asset/jquery": ">=1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "js/jquery.fileupload.js"
+                ],
+                "bower-asset-ignore": [
+                    "/*.*",
+                    "/cors",
+                    "css/demo-ie8.css",
+                    "css/demo.css",
+                    "css/style.css",
+                    "js/app.js",
+                    "js/main.js",
+                    "server",
+                    "test"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images.",
+            "keywords": [
+                "bootstrap",
+                "chunk",
+                "cross-domain",
+                "cross-site",
+                "drag",
+                "drop",
+                "file",
+                "gae",
+                "go",
+                "jquery",
+                "multiple",
+                "php",
+                "preview",
+                "progress",
+                "python",
+                "resume",
+                "selection",
+                "upload",
+                "widget"
+            ]
+        },
+        {
+            "name": "bower-asset/blueimp-load-image",
+            "version": "v2.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/JavaScript-Load-Image.git",
+                "reference": "5cae749216b942ae663a0daabf5dfde4afeaa355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Load-Image/zipball/5cae749216b942ae663a0daabf5dfde4afeaa355",
+                "reference": "5cae749216b942ae663a0daabf5dfde4afeaa355",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
+            "name": "bower-asset/blueimp-tmpl",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blueimp/JavaScript-Templates.git",
+                "reference": "9dc414739a4d23663018575c5036b88e0de2ba4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Templates/zipball/9dc414739a4d23663018575c5036b88e0de2ba4d",
+                "reference": "9dc414739a4d23663018575c5036b88e0de2ba4d",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -452,7 +563,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/ezyang/htmlpurifier/d0c392f77d2f2a3dcf7fcb79e2a1e2b8804e75b2.zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/d0c392f77d2f2a3dcf7fcb79e2a1e2b8804e75b2",
                 "reference": "d0c392f77d2f2a3dcf7fcb79e2a1e2b8804e75b2",
                 "shasum": ""
             },
@@ -754,16 +865,16 @@
         },
         {
             "name": "rmrevin/yii2-fontawesome",
-            "version": "2.15.2",
+            "version": "2.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "23e282eadeaec70ea7a0241eabf5d672568f26ba"
+                "reference": "ab08282b8cd05c570634926f41c868cf902981e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/rmrevin/yii2-fontawesome/23e282eadeaec70ea7a0241eabf5d672568f26ba.zip",
-                "reference": "23e282eadeaec70ea7a0241eabf5d672568f26ba",
+                "url": "https://packagist.phpcomposer.com/files/rmrevin/yii2-fontawesome/ab08282b8cd05c570634926f41c868cf902981e7.zip",
+                "reference": "ab08282b8cd05c570634926f41c868cf902981e7",
                 "shasum": ""
             },
             "require": {
@@ -801,7 +912,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2016-08-19 14:09:51"
+            "time": "2016-08-31 12:41:25"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -813,7 +924,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/swiftmailer/swiftmailer/4cc92842069c2bbc1f28daaaf1d2576ec4dfe153.zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
                 "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
                 "shasum": ""
             },
@@ -866,7 +977,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-framework/2b75151ea60e1fd820046416eee2e89c3dda1133.zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2b75151ea60e1fd820046416eee2e89c3dda1133",
                 "reference": "2b75151ea60e1fd820046416eee2e89c3dda1133",
                 "shasum": ""
             },
@@ -1279,7 +1390,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/fzaninotto/Faker/44f9a286a04b80c76a4e5fb7aad8bb539b920123.zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
                 "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
                 "shasum": ""
             },
@@ -1327,7 +1438,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/phpspec/php-diff/0464787bfa7cd13576c5a1e318709768798bec6a.zip",
+                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/0464787bfa7cd13576c5a1e318709768798bec6a",
                 "reference": "0464787bfa7cd13576c5a1e318709768798bec6a",
                 "shasum": ""
             },

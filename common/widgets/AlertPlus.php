@@ -6,6 +6,7 @@
  * @license http://www.yiiframework.com/license/
  */
 namespace common\widgets;
+use yii\helpers\Html;
 
 /**
  * Alert widget renders a message from session flash. All flash messages are displayed
@@ -26,7 +27,7 @@ namespace common\widgets;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @author Alexander Makarov <sam@rmcreative.ru>
  */
-class Alert extends \yii\bootstrap\Widget
+class AlertPlus extends \yii\bootstrap\Widget
 {
     /**
      * @var array the alert types configuration for the flash messages.
@@ -54,26 +55,31 @@ class Alert extends \yii\bootstrap\Widget
         $session = \Yii::$app->session;
         $flashes = $session->getAllFlashes();
         $appendCss = isset($this->options['class']) ? ' '.$this->options['class'] : '';
-
-        foreach ($flashes as $type => $data) {
+        $data = '';
+        $this->options['id'] = 'top-alert';
+        if (!empty($flashes)) {
+            $data = current($flashes);
+            $type = array_search($data, $flashes);
             if (isset($this->alertTypes[$type])) {
-                $data = (array) $data;
-                foreach ($data as $i => $message) {
-                    /* initialize css class for each alert box */
-                    $this->options['class'] = $this->alertTypes[$type].$appendCss;
-
-                    /* assign unique id to each alert box */
-                    $this->options['id'] = $this->getId().'-'.$type.'-'.$i;
-
-                    echo \yii\bootstrap\Alert::widget([
-                        'body' => $message,
-                        'closeButton' => $this->closeButton,
-                        'options' => $this->options,
-                    ]);
-                }
-
+                /* initialize css class for each alert box */
+                $this->options['class'] = $this->alertTypes[$type].$appendCss;
                 $session->removeFlash($type);
             }
+        } else {
+            $this->options['style'] = 'display:none';
         }
+        echo \yii\bootstrap\Alert::widget([
+            'body' => Html::tag('div',$data ?: '', ['class' => 'alert-content']),
+            'closeButton' => $this->closeButton,
+            'options' => $this->options,
+        ]);
     }
 }
+
+/*
+<?= \yii\bootstrap\Alert::widget([
+            'id' => 'top-alert',
+            'body' => \yii\helpers\Html::tag('div', Yii::$app->session->getAllFlashes() ? current(Yii::$app->session->getAllFlashes()) : '', ['class' => 'alert-content']),
+            'options' => Yii::$app->session->getAllFlashes() ? ['class' => 'alert-' . array_search(current(Yii::$app->session->getAllFlashes()), Yii::$app->session->getAllFlashes())] : ['style' => 'display:none']
+        ])?>
+ */
