@@ -7,7 +7,7 @@
  */
  
 return [
-    "admin" => [
-        "class" => "mdm\admin\Module",
+    'admin' => [
+        'class' => 'mdm\admin\Module',
     ]
 ];
