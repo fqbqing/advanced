@@ -30,4 +30,20 @@ class SystemController extends Controller
             'dataProvider' => $dataProvider
         ]);
     }
+    public function actionStoreConfig($group = 'site')
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Config::find()->where(['group' => $group]),
+            'pagination' => false
+        ]);
+        $configs = $dataProvider->getModels();
+        if (Model::loadMultiple($configs, \Yii::$app->request->post()) && Model::validateMultiple($configs)) {
+            foreach ($configs as $config) {
+                /* @var $config Config */
+                $config->save(false);
+            }
+            TagDependency::invalidate(\Yii::$app->cache,  Yii::$app->config->cacheTag);
+            return $this->redirect('config');
+        }
+    }
 }

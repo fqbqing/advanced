@@ -12,6 +12,20 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => $modules,
+    'controllerMap'=>[
+        'file-manager-elfinder' => [
+            'class' => 'mihaildev\elfinder\Controller',
+            'disabledCommands' => ['netmount'],
+            'roots' => [
+                [
+                    'baseUrl' => '@storageUrl',
+                    'basePath' => '@storagePath',
+                    'path'   => '/',
+                ]
+            ]
+        ],
+        'upload' => \common\actions\UploadController::className()
+    ],
     "aliases" => [
         "@mdm/admin" => "@vendor/mdmsoft/yii2-admin",
     ],

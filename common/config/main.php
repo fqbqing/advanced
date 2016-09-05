@@ -10,5 +10,10 @@ return [
             'class' => 'common\\components\\Config',
             'localConfigFile' => '@common/config/main-local.php'
         ],
+        'storage' => [
+            'class' => 'common\\components\\Storage',
+            'basePath' => '@storagePath/upload',
+            'baseUrl' => '@storageUrl/upload'
+        ],
     ],
 ];
