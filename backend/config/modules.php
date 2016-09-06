@@ -9,5 +9,6 @@
 return [
     'admin' => [
         'class' => 'mdm\admin\Module',
-    ]
+    ],
+    'user'=>['backend\modules\user'],
 ];
