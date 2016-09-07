@@ -5,10 +5,12 @@
  * Date: 16/8/30
  * Time: 下午3:53
  */
- 
+
 return [
-    'admin' => [
-        'class' => 'mdm\admin\Module',
+    'admin' => ['class' => 'mdm\admin\Module',],
+    'user' => ['class'
+                => 'backend\modules\user\Module'],
+    'vote' => [
+        'class' => 'backend\modules\vote\Module',
     ],
-    'user'=>['backend\modules\user'],
 ];
