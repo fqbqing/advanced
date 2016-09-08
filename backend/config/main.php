@@ -77,5 +77,6 @@ return [
 
 
     ],
+    'as adminLog' => 'backend\\behaviors\\AdminLogBehavior',
     'params' => $params,
 ];
