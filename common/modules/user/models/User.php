@@ -371,33 +371,5 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->blocked_at != null;
     }
 
-    /**
-     * 今天是否已签到
-     * @return bool
-     */
-    public function getIsSign()
-    {
-        if (!empty($this->sign)) {
-            return date('Ymd', $this->sign->last_sign_at) == date('Ymd');
-        }
-        return false;
-    }
 
-    /**
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getSign()
-    {
-        return $this->hasOne(Sign::className(), ['user_id' => 'id']);
-    }
-
-    /**
-     * TODO
-     * @return string
-     */
-    public function getBadge()
-    {
-        return '土豪';
-    }
 }
