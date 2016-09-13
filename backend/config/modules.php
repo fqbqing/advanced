@@ -9,7 +9,7 @@
 return [
     'admin' => ['class' => 'mdm\admin\Module',],
     'user' => ['class'
-                => 'backend\modules\user\Module'],
+                => 'common\modules\user\Module'],
     'vote' => [
         'class' => 'backend\modules\vote\Module',
     ],

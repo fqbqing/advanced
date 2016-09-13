@@ -20,7 +20,7 @@ use yii\web\View;
  */
 
 $this->title = '修改用户';
-$this->params['breadcrumbs'][] = ['label' => '用户列表', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '用户管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -35,14 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'class' => 'nav nav-pills nav-stacked',
                     ],
                     'items' => [
-                        ['label' => '<i class="fa fa-user"></i> '. Yii::t('app', 'Account details'), 'url' => ['/user/admin/update', 'id' => $user->id], 'encode' => false],
-                        ['label' => '<i class="fa fa-file-text-o"></i> '. Yii::t('app', 'Profile details'), 'url' => ['/user/admin/update-profile', 'id' => $user->id], 'encode' => false],
-                        [
-                            'label' => '<span class="glyphicon glyphicon-hand-left"></span> ' . Yii::t('app', 'Assignments'),
-                            'url' => ['/user/admin/assignments', 'id' => $user->id],
-                            'visible' => Yii::$app->getModule("rbac"),
-                            'encode' => false
-                        ],
+                        ['label' => '<i class="fa fa-user"></i>帐户详情', 'url' => ['/user/admin/update', 'id' => $user->id], 'encode' => false],
                     
                     ],
                 ]) ?>
@@ -57,45 +50,45 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                     'items' => [
                         [
-                            'label' => '<i class="fa fa-hand-paper-o"></i> '.Yii::t('app', 'Confirm'),
+                            'label' => '<i class="fa fa-hand-paper-o"></i> '.Yii::t('app', '确认'),
                             'url'   => ['/user/admin/confirm', 'id' => $user->id],
                             'visible' => !$user->isConfirmed,
                             'linkOptions' => [
                                 'class' => 'text-success',
                                 'data-method' => 'post',
-                                'data-confirm' => Yii::t('app', 'Are you sure you want to confirm this user?'),
+                                'data-confirm' => '确认该用户?',
                             ],
                             'encode' => false
                         ],
                         [
-                            'label' => '<i class="fa   fa-ban "></i> '.Yii::t('app', 'Block'),
+                            'label' => '<i class="fa   fa-ban "></i> '.Yii::t('app', '锁定'),
                             'url'   => ['/user/admin/block', 'id' => $user->id],
                             'visible' => !$user->isBlocked,
                             'linkOptions' => [
                                 'class' => 'text-danger',
                                 'data-method' => 'post',
-                                'data-confirm' => Yii::t('app', 'Are you sure you want to block this user?'),
+                                'data-confirm' => '确定锁定该用户?',
                             ],
                             'encode' => false
                         ],
                         [
-                            'label' => '<i class="fa fa-check"></i> '.Yii::t('app', 'Unblock'),
+                            'label' => '<i class="fa fa-check"></i> '.Yii::t('app', '取消锁定'),
                             'url'   => ['/user/admin/block', 'id' => $user->id],
                             'visible' => $user->isBlocked,
                             'linkOptions' => [
                                 'class' => 'text-success',
                                 'data-method' => 'post',
-                                'data-confirm' => Yii::t('app', 'Are you sure you want to unblock this user?'),
+                                'data-confirm' => '您确定要取消锁定该用户?',
                             ],
                             'encode' => false
                         ],
                         [
-                            'label' =>'<i class="fa fa-trash-o"></i> '. Yii::t('app', 'Delete'),
+                            'label' =>'<i class="fa fa-trash-o"></i> '. Yii::t('app', '删除'),
                             'url'   => ['/user/admin/delete', 'id' => $user->id],
                             'linkOptions' => [
                                 'class' => 'text-danger',
                                 'data-method' => 'post',
-                                'data-confirm' => Yii::t('app', 'Are you sure you want to delete this user?'),
+                                'data-confirm' => '您确定要删除该用户?',
                             ],
                             'encode' => false
                         ],

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace backend\modules\user\traits;
+namespace common\modules\user\traits;
 
 use yii\base\Model;
 use yii\web\Response;

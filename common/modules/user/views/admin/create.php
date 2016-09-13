@@ -18,8 +18,8 @@ use yii\helpers\Html;
  * @var dektrium\user\models\User 	$user
  */
 
-$this->title = Yii::t('app', 'Create a user account');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Users'), 'url' => ['index']];
+$this->title = '创建一个帐户';
+$this->params['breadcrumbs'][] = ['label' => '用户管理', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -33,8 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         'class' => 'nav-pills nav-stacked',
                     ],
                     'items' => [
-                        ['label' => Yii::t('app', 'Account details'), 'url' => ['/user/admin/create']],
-                        ['label' => Yii::t('app', 'Profile details'), 'options' => [
+                        ['label' => '帐户', 'url' => ['/user/admin/create']],
+                        ['label' => '信息', 'options' => [
                             'class' => 'disabled',
                             'onclick' => 'return false;',
                         ]],
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="alert alert-info">
-                    <?= Yii::t('app', 'A password will be generated 111111 if not provided') ?>.
+                    如果没有提供密码，将自动生成.
                 </div>
                 <?php $form = ActiveForm::begin([
                     'enableAjaxValidation'   => true,
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $this->render('_user', ['form' => $form, 'user' => $user]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton( Yii::t('app', 'Create'), ['class' => 'btn bg-maroon btn-flat btn-block']) ?>
+                    <?= Html::submitButton( '创建', ['class' => 'btn bg-maroon btn-flat btn-block']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>

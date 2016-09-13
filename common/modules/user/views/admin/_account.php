@@ -29,7 +29,7 @@ use yii\helpers\Html;
 <?= $this->render('_user', ['form' => $form, 'user' => $user]) ?>
 
 <div class="form-group">
-   <?= Html::submitButton( Yii::t('app', 'Update'), ['class' => 'btn bg-maroon btn-flat btn-block']) ?>
+   <?= Html::submitButton( '更新', ['class' => 'btn bg-maroon btn-flat btn-block']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>

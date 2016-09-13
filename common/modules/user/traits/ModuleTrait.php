@@ -1,9 +1,9 @@
 <?php
 
 
-namespace backend\modules\user\traits;
+namespace common\modules\user\traits;
 
-use backend\modules\user\Module;
+use common\modules\user\Module;
 
 trait ModuleTrait
 {

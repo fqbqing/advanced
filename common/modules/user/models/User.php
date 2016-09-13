@@ -1,9 +1,9 @@
 <?php
 
-namespace backend\modules\user\models;
+namespace common\modules\user\models;
 
-use backend\models\Sign;
-use backend\modules\user\traits\ModuleTrait;
+use common\models\Sign;
+use common\modules\user\traits\ModuleTrait;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
@@ -257,6 +257,7 @@ class User extends ActiveRecord implements IdentityInterface
 
         $this->confirmed_at = time();
         $this->password = $this->password == null ? $this->getModule()->defaultPassword : $this->password;
+        $this->generateAuthKey();
         if (!$this->save()) {
             return false;
         }

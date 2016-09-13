@@ -1,16 +1,16 @@
 <?php
 
-namespace backend\modules\user;
+namespace backend\modules\member;
 
 /**
- * user module definition class
+ * member module definition class
  */
 class Module extends \yii\base\Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'backend\modules\user\controllers';
+    public $controllerNamespace = 'backend\modules\member\controllers';
 
     /**
      * @inheritdoc

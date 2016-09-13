@@ -1,21 +1,20 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: yidashi
+ * User: yappy
  * Date: 16/7/26
  * Time: 下午5:56
  */
 
-namespace backend\modules\user\controllers;
+namespace common\modules\user\controllers;
 
 
-use backend\modules\user\models\LoginForm;
-use backend\modules\user\models\Profile;
-use backend\modules\user\traits\AjaxValidationTrait;
+use common\modules\user\models\LoginForm;
+use common\modules\user\models\Profile;
+use common\modules\user\traits\AjaxValidationTrait;
 use Yii;
-use backend\modules\user\models\User;
+use common\modules\user\models\User;
 use yii\data\ActiveDataProvider;
-use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -82,7 +81,7 @@ class AdminController extends Controller
         $this->performAjaxValidation($user);
 
         if ($user->load(\Yii::$app->request->post()) && $user->create()) {
-            \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'User has been created'));
+            \Yii::$app->getSession()->setFlash('success','用户已创建');
             return $this->redirect(['update', 'id' => $user->id]);
         }
 
@@ -106,7 +105,7 @@ class AdminController extends Controller
         $this->performAjaxValidation($user);
 
         if ($user->load(\Yii::$app->request->post()) && $user->save()) {
-            \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'Account details have been updated'));
+            \Yii::$app->getSession()->setFlash('success', '成功更新帐户');
             return $this->refresh();
         }
 
@@ -123,8 +122,17 @@ class AdminController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $user = $this->findModel($id);
+        if ($id == \Yii::$app->user->getId()) {
 
+            \Yii::$app->getSession()->setFlash('danger', '你不能删除你自己的帐户');
+        } else {
+
+            if ($user->isAdmin) {
+                throw new ForbiddenHttpException('不支持删除管理员帐号');
+            }
+        }
+        $user->delete();
         return $this->redirect(['index']);
     }
 
@@ -175,7 +183,7 @@ class AdminController extends Controller
 
 
         if ($profile->load(\Yii::$app->request->post()) && $profile->save()) {
-            \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'Profile details have been updated'));
+            \Yii::$app->getSession()->setFlash('success', 'Profile details have been updated');
             return $this->refresh();
         }
 
@@ -187,7 +195,7 @@ class AdminController extends Controller
     public function actionBlock($id)
     {
         if ($id == \Yii::$app->user->getId()) {
-            \Yii::$app->getSession()->setFlash('danger', \Yii::t('user', 'You can not block your own account'));
+            \Yii::$app->getSession()->setFlash('danger', '你不能封禁你自己的帐户');
         } else {
             $user  = $this->findModel($id);
             if ($user->isAdmin) {
@@ -195,10 +203,10 @@ class AdminController extends Controller
             }
             if ($user->getIsBlocked()) {
                 $user->unblock();
-                \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'User has been unblocked'));
+                \Yii::$app->getSession()->setFlash('success','用户已被解锁');
             } else {
                 $user->block();
-                \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'User has been blocked'));
+                \Yii::$app->getSession()->setFlash('success','用户已被锁定');
             }
         }
 
@@ -216,7 +224,7 @@ class AdminController extends Controller
 
         $model->confirm();
 
-        \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'User has been confirmed'));
+        \Yii::$app->getSession()->setFlash('success', 'User has been confirmed');
 
         return $this->redirect(Url::previous('actions-redirect'));
     }
