@@ -15,6 +15,7 @@ use common\modules\user\traits\AjaxValidationTrait;
 use Yii;
 use common\modules\user\models\User;
 use yii\data\ActiveDataProvider;
+use yii\db\Query;
 use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -47,6 +48,9 @@ class AdminController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => User::find(),
+            'pagination' => [
+                'pageSize' => 2,
+            ],
         ]);
         return $this->render('index', [
             'dataProvider' => $dataProvider,
