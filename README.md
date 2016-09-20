@@ -68,9 +68,35 @@ composer config -g repo.packagist composer https://packagist.phpcomposer.com
 注：更新 yii2 ，进入 cmd ，切换目录到 advanced，输入
 composer update yiisoft/yii2 yiisoft/yii2-composer bower-asset/jquery.inputmask
 
-<<<<<<< 9c579a930d991b6449a3c5cc4c6ecd2a3a8e7120
+
 3最简单的权限实现方法
 http://www.getyii.com/topic/585
-=======
 common/data/user.sql导入数据库,后从frontend注册一个帐户即可
->>>>>>> README.md更新
+
+4、API available:
+
+```php
+// version 1
+OPTIONS /index.php?r=v1/user/login
+POST /index.php?r=v1/user/login
+
+OPTIONS /index.php?r=v1/posts
+GET /index.php?r=v1/posts
+GET /index.php?r=v1/posts/ID
+POST /index.php?r=v1/posts
+PUT /index.php?r=v1/posts/ID
+DELETE /index.php?r=v1/posts/ID
+
+OPTIONS /index.php?r=v1/comments
+GET /index.php?r=v1/comments
+GET /index.php?r=v1/comments/ID
+POST /index.php?r=v1/comments
+PUT /index.php?r=v1/comments/ID
+DELETE /index.php?r=v1/comments/ID
+
+//version 2
+OPTIONS /index.php?r=v2/user/login
+POST /index.php?r=v2/user/login
+```
+
+You can hide `index.php` from URL. For that see [server.md](server.md)
