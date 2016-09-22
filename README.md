@@ -100,3 +100,7 @@ POST /index.php?r=v2/user/login
 ```
 
 You can hide `index.php` from URL. For that see [server.md](server.md)
+
+5、api开发参考
+
+http://www.fancyecommerce.com/2016/05/04/yii2-restful-%E6%8E%A5%E5%8F%A3-api-1-%EF%BC%9A-%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/
