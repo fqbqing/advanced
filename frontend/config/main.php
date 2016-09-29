@@ -29,7 +29,21 @@ return [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'levels' => ['error', 'warning', 'info','trace'],
+                    'logFile' => '@root/runtime/logs/frontend/requests.log',
+                    'maxFileSize' => 1024 * 2,
+                    'maxLogFiles' => 20,
+                    'logVars' => [],
+                    'except'=>['yii\db\*', 'yii\web\*'],
+                ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning', 'info'],
+                    'maxFileSize' => 1024 * 2,
+                    'maxLogFiles' => 20,
+                    'logVars' => [],
+                    'categories'=>['yii\db\*'],
+                    'logFile'=>'@root/runtime/logs/frontend/sql.log',
                 ],
             ],
         ],
