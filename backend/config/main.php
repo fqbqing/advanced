@@ -36,7 +36,7 @@ return [
             'site/*',
             //controller/action
             // * 表示允许所有
-            //'*'
+           //    '*'
         ]
     ],
     'components' => [

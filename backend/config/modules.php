@@ -13,4 +13,7 @@ return [
     'vote' => [
         'class' => 'backend\modules\vote\Module',
     ],
+    'post' => [
+        'class' => 'backend\modules\post\Module',
+    ],
 ];
