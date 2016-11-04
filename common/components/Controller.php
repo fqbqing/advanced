@@ -20,10 +20,10 @@ class Controller extends \yii\web\Controller
 
     public function afterAction($action, $result)
     {
-        if (!Yii::$app->user->isGuest) {
+        /*if (!Yii::$app->user->isGuest) {
             $actionName = "frontend@{$this->module->id}_{$this->id}_{$action->id}";
             MeritService::update($actionName);
-        }
+        }*/
         return parent::afterAction($action, $result);
     }
 

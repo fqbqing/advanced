@@ -1,7 +1,8 @@
 <?php
+
 /**
  * Created by PhpStorm.
- * User: yappy
+ * User: AQi
  * Date: 2016/10/20 0020
  * Time: 18:46
  */
@@ -24,4 +25,20 @@ class TestController extends Controller
         ;
         var_dump($user_arr,array_sum($user_arr));die;
     }
+
+    /**
+     * 计算下一月日期/截至今天为止.超过今天从上一月算起
+     */
+    public function actionNextInterval()
+    {
+
+        $items = \common\components\helpers\DateHelper::getMonthPeriod();
+        echo '<pre>';
+        var_dump( $items );
+        echo '</pre>';
+        exit;
+        return;
+    }
+
+
 }
