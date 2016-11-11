@@ -1,14 +1,5 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: Wang Zhaogang
- * Date: 2015/12/14
- * Time: 12:11
- */
-
-namespace app\components;
-
+namespace common\components;
 
 require_once __DIR__ . "/wxpay/WxPay.Api.php";
 require_once __DIR__ . "/wxpay/WxPay.JsApiPay.php";
@@ -16,13 +7,8 @@ use Yii;
 use yii\base\Exception;
 use yii\helpers\Url;
 use yii\log\Logger;
-use app\models\Order;
-use app\models\User;
 
-/**
- * Class WeixinPay
- * @package app\components
- */
+
 class WeixinPay {
 
 
@@ -37,14 +23,13 @@ class WeixinPay {
      * @return array|\成功时返回
      * @throws \WxPayException
      */
-    public static function createOrder($orderId, $productId, $name, $deposit, $expireTime, $isInWeixin = false,
+    public static function createOrder($orderId, $subject, $deposit, $expireTime, $isInWeixin = false,
                                        $notifyUrl = '') {
-
         $input = new \WxPayUnifiedOrder();
         $input->SetAppid(Yii::$app->params['weixin.appId']);
         $input->SetMch_id(Yii::$app->params['weixin.mchId']);
         $input->SetDevice_info("WEB");
-        $input->SetBody($name);
+        $input->SetBody($subject);
         $input->SetTime_start(date('YmdHis', time()));
         $input->SetTime_expire(date('YmdHis', $expireTime));
         Yii::getLogger()->log('Weixinpay order created, time:' . json_encode(['s' => $input->GetTime_start(),
@@ -54,16 +39,16 @@ class WeixinPay {
         if ($isInWeixin) {
             $input->SetTrade_type('JSAPI');
             //获取并设置用户openId
-            $userId = Yii::$app->user->getIdentity()->getId();
-            $user = User::findOne($userId);
-            $input->SetOpenid($user->getOpenId());
+            $tools = new \JsApiPay();
+            $openid = $tools->GetOpenid();
+            $input->SetOpenid($openid);
             $input->SetOut_trade_no(Yii::$app->params['weixin.jsapi_orderIdPrefix'] . $orderId);
         } else {
             $input->SetTrade_type('NATIVE');
             $input->SetOut_trade_no(Yii::$app->params['weixin.scan_orderIdPrefix'] . $orderId);
         }
 
-        $input->SetProduct_id($productId);
+        $input->SetProduct_id($orderId);
 
         if (empty($notifyUrl)) {
             $notifyUrl = 'weixin-pay/notify';
@@ -139,64 +124,6 @@ class WeixinPay {
                 Logger::LEVEL_INFO);
             return null;
         }
-    }
 
-    /**
-     * 退款申请
-     * @param $orderId  订单id
-     * @param $payment  支付方式
-     * @param $deposit  退款金额
-     */
-    public static function refund($orderId, $payment, $deposit) {
-        $input = new \WxPayRefund();
-        $input->SetAppid(Yii::$app->params['weixin.appId']);
-        $input->SetMch_id(Yii::$app->params['weixin.mchId']);
-        if ($payment === Order::WEIXIN_NATIVE) {
-            $tradeNo = Yii::$app->params['weixin.jsapi_orderIdPrefix'] . $orderId;
-        } else if ($payment === Order::WEIXIN_SCAN) {
-            $tradeNo = Yii::$app->params['weixin.scan_orderIdPrefix'] . $orderId;
-        }
-        $input->SetOut_trade_no($tradeNo);
-        $input->SetOut_refund_no($tradeNo);
-        $input->SetTotal_fee($deposit);
-        $input->SetRefund_fee($deposit);
-        $input->SetOp_user_id(Yii::$app->params['weixin.mchId']);
-
-        $refund = \WxPayApi::refund($input);
-        Yii::getLogger()->log('Weixinpay refund created, response from weixin:' . json_encode($refund),
-            Logger::LEVEL_INFO);
-
-        if (isset($refund['result_code']) && $refund['result_code'] === 'SUCCESS'){
-            return ['success' => true, 'data' => 'success'];
-        }
-        return ['success' => false,'message' => isset($refund['err_code_des']) ? $refund['err_code_des'] : $refund['return_msg']];
-    }
-
-    /**
-     * 退款查询
-     * @param $orderId
-     * @param $payment
-     * @return \成功时返回
-     * @throws \WxPayException
-     */
-    public static function refundQuery($orderId, $payment) {
-        $input = new \WxPayRefundQuery();
-        $input->SetAppid(Yii::$app->params['weixin.appId']);
-        $input->SetMch_id(Yii::$app->params['weixin.mchId']);
-        $tradeNo = "";
-        if ((int)$payment === Order::WEIXIN_NATIVE) {
-            $tradeNo = Yii::$app->params['weixin.jsapi_orderIdPrefix'] . $orderId;
-        }  if ((int)$payment === Order::WEIXIN_SCAN) {
-            $tradeNo = Yii::$app->params['weixin.scan_orderIdPrefix'] . $orderId;
-        }
-        $input->SetOut_refund_no($tradeNo);
-
-        $refundQuery = \WxPayApi::refundQuery($input);
-        Yii::getLogger()->log('Weixinpay refund query, response from weixin:' . json_encode($refundQuery),
-            Logger::LEVEL_INFO);
-        return (isset($refundQuery['result_code']) && $refundQuery['result_code'] === 'SUCCESS')
-            ? ['success' => true, 'data' => isset($refundQuery['refund_status_0']) ? $refundQuery['refund_status_0'] : '']
-            : ['success' => false, isset($refundQuery['err_code_des']) ? $refundQuery['err_code_des']
-                : $refundQuery['return_msg']];
     }
 }
