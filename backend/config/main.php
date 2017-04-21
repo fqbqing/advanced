@@ -33,10 +33,10 @@ return [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             //这里是允许访问的action,如 'site/*'
-            'site/*',
+            //'site/*',
             //controller/action
             // * 表示允许所有
-           //    '*'
+               '*',
         ]
     ],
     'components' => [

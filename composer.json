@@ -23,13 +23,19 @@
         "kartik-v/yii2-widget-select2": "@dev",
         "yiisoft/yii2-authclient": "^2.0",
         "aferrandini/PHPQRCode": "1.0.1",
-        "yiisoft/yii2-redis": "*",
         "mobiledetect/mobiledetectlib": "^2.8",
         "dmstr/yii2-adminlte-asset": "2.*",
         "mdmsoft/yii2-admin": "2.x-dev",
         "bower-asset/blueimp-file-upload" : "*",
         "vova07/yii2-imperavi-widget": "*",
-        "2amigos/yii2-selectize-widget": "~1.0"
+        "2amigos/yii2-selectize-widget": "~1.0",
+        "yiisoft/yii2-smarty": "^2.0",
+        "2amigos/yii2-qrcode-helper": "*",
+        "linslin/yii2-curl": "*",
+        "yiisoft/yii2-redis": "^2.0",
+        "scotthuangzl/yii2-export2excel": "dev-master",
+        "yiisoft/yii2-mongodb": "~2.0.0"
+
 
     },
     "require-dev": {

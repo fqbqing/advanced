@@ -36,7 +36,8 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function tableName()
     {
-        return '{{%user}}';
+       // return '{{%user}}';
+        return 'zq_member';
     }
 
     /**
@@ -68,7 +69,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentity($id)
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['id' => $id]);
     }
 
     /**
@@ -88,7 +89,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByUsername($username)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['username' => $username]);
     }
 
     /**
@@ -158,7 +159,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
+        return Yii::$app->security->validatePassword($password, $this->password);
     }
 
     /**
@@ -201,7 +202,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function isUserAdmin($username)
     {
-        if (static::findOne(['username' => $username, 'role' => self::ROLE_ADMIN])) {
+        if (static::findOne(['username' => $username])) {
             return true;
         } else {
             return false;
