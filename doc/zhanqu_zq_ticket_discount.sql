@@ -1,0 +1,1 @@
+INSERT INTO zhanqu.zq_ticket_discount (exhibition_id, page_id, ticket_count, price_discount, add_time, update_time) VALUES (138, 83, 1, 56, null, null);

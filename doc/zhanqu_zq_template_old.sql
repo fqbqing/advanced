@@ -1,0 +1,2 @@
+INSERT INTO zhanqu.zq_template_old (cat, title, banner_url, about, news) VALUES (0, 'Template#1', 'http://baidu.com', 'About#1', 'News#1');
+INSERT INTO zhanqu.zq_template_old (cat, title, banner_url, about, news) VALUES (1, 'Template#2', 'http://sina.com', 'About#2', 'New#2');

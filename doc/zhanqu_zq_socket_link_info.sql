@@ -1,0 +1,1 @@
+INSERT INTO zhanqu.zq_socket_link_info (member_id, fd, joiner_id, car_brand_id, exhibition_id, create_time) VALUES (95, '649', 11, 0, 127, '2015-12-10 11:46:09');

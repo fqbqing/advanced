@@ -1,0 +1,1 @@
+INSERT INTO zhanqu.zq_lottery_record (lottery_level_id, lottery_project_id, lottery_code, username, mobile, status, created_at, updated_at, updated_by) VALUES (244, 25, '304681', '张三', '13388888888', 0, '2016-02-24 14:37:02', null, null);

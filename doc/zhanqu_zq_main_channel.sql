@@ -1,0 +1,13 @@
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (0, '下载', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (95, '软件', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (0, '新闻中心', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (103, '国际人物', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (103, '体育新闻', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (103, '娱乐新闻', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (103, '国内新闻', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (107, '时政新闻', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (107, '港澳台新闻', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (0, '视频', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (112, '爱情', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (112, '恐怖', '', 0, '');
+INSERT INTO zhanqu.zq_main_channel (parent_id, name, redirect_url, sort_num, note) VALUES (0, 'yyyy', '', 0, '');

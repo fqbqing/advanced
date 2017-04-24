@@ -1,0 +1,4 @@
+INSERT INTO zhanqu.zq_alipay (name, alipay_partner, alipay_key, alipay_seller_email, created_at, updated_at) VALUES ('尚格会展股份有限公司', '2088411945226741', 'cau8o29wko4khkffe42zld61vmpenyqk', '2858932098@qq.com', null, null);
+INSERT INTO zhanqu.zq_alipay (name, alipay_partner, alipay_key, alipay_seller_email, created_at, updated_at) VALUES ('bababuyche', '2088911274817015', 'w9wsu9nyf1kh699pzshncvv4fngni0ic', 'bababuycar@163.com', null, null);
+INSERT INTO zhanqu.zq_alipay (name, alipay_partner, alipay_key, alipay_seller_email, created_at, updated_at) VALUES ('四川尚格莱德会展服务有限公司', '2088621493065802', '19qjibxijnv6y304sz7yvikrt6ac89ap', '2644639476@qq.com', null, null);
+INSERT INTO zhanqu.zq_alipay (name, alipay_partner, alipay_key, alipay_seller_email, created_at, updated_at) VALUES ('尚格会展股份有限公司', '2088411945226741', 'cau8o29wko4khkffe42zld61vmpenyqk', '2858932098@qq.com', null, null);

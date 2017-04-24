@@ -1,0 +1,2 @@
+INSERT INTO zhanqu.zq_rel_ticket_lottery (ticket_id, lottery_project_id, lottery_num, created_at) VALUES (1, 31, 1, null);
+INSERT INTO zhanqu.zq_rel_ticket_lottery (ticket_id, lottery_project_id, lottery_num, created_at) VALUES (1, 25, 10, null);
