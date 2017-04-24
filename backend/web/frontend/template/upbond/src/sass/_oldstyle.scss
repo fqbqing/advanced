@@ -1,0 +1,82 @@
+/* -----------------------营销管理------------------------ */
+/*分隔导航*/
+.divide-nav{border-bottom: #e8e8e8 solid 2px; margin-bottom: 20px; display: -webkit-box; display: -webkit-flex; display: flex; justify-content: space-between;}
+.divide-nav li{width: 100px; text-align: center; display: inline-block; position: relative;}
+.divide-nav li:after{content: ""; display: block; width: 1px; height:15px; background: #ebebeb; position: absolute; right: 0px; top: 13px;}
+.divide-nav li:last-of-type:after{display: none;}
+.divide-nav li a.active{color: #1887d3;}
+.divide-nav li a.active:after{content: ""; display: block; width: 100%; height: 2px; background: #1887d3; position: absolute; bottom: -2px; left: 0;}
+.divide-nav li a{width: 100%; height: 50px; line-height: 35px; display: inline-block; font-size: 16px; color: #666; text-decoration: none;}
+
+/* 优惠活动-产品发布 */
+.table-preview-img{width: 180px; height: 100px; background-position:center !important; background-size: cover !important; overflow: hidden;}
+.Upload-img{width: 180px; height:100px; border: #e8e8e8 1px dashed; text-align: center; line-height: 100px;}
+.Upload-img img {max-width: 178px; max-height: 100px;}
+
+/*优惠活动详情*/
+.Avatar-small{width: 50px; height: 50px; border: #f5f5f5 solid 1px; border-radius: 100%;}
+.replyBox{border-bottom:1px solid #e8e8e8; padding: 15px;}
+.reply-mg>.name{float: left; color: #454444; font-weight: bold;}
+.reply-mg>.time{float: right; font-size: 12px; color: #8f8f8f;}
+.reply-mg>.time>.close{margin-top: -4px; margin-left: 10px}
+.reply-mg>.content{padding: 15px 0; clear: both; zoom: 1; white-space: normal; word-break: break-all;}
+.reply-mg>.btn-rp{float: right; color: #1887d3; cursor: pointer;}
+.reply-mg>.inputBox{padding: 10px; margin-top: 30px; clear: both; position: relative; border: #f0f0f0 solid 1px; background: #fafafa;}
+.reply-mg>.inputBox>.arrow{width:14px;height:8px;display:block;background: url(../images/template/icon.png) no-repeat;background-position:-259px -90px;position: absolute;right: 8px; top: -8px; z-index: 10}
+.reply-mg>.inputBox>.message{margin-bottom: 10px; display: none}
+.reply-mg>.inputBox>.message:after{content: ""; display: block; clear: both;}
+.reply-mg>.inputBox>.message>form>textarea{width:100%; height: 80px; border: #76c3f2 solid 1px;}
+.reply-mg>.inputBox>.reply-info>ul>li{ border-bottom: #e2e2e2 dashed 1px; padding: 15px 0;}
+.reply-mg>.inputBox>.reply-info>ul>li:last-of-type{border-bottom:none;}
+.reply-info .time{font-size: 12px; color: #8f8f8f;}
+.reply-info .time .close{margin-top: -4px; margin-left: 10px}
+
+
+/* -----------------------数据管理------------------------ */
+/*票证统计*/
+.title-small{border-bottom: #d8d8d8 solid 1px;}
+.title-small span{padding: 0 15px; display: inline-block; margin-bottom: -1px;  border-bottom: #959595 solid 1px;color: #2c2c2c;}
+.ticket-sent{margin: 10px 0; background: #fff;}
+.ticket-sent-num{height: 90px; padding: 17px 10px; text-align: right; color: #fff; overflow: hidden; position: relative;}
+.ticket-sent-num h3{color:#fff; margin: 0 0 2px; padding: 0; font-size: 30px;font-weight: 400;}
+.ticket-sent-icon-piao{width:98px;height:81px;background:  url(/frontend/images/template/icon.png) no-repeat;background-position:0 -150px; position: absolute; bottom: -15px; left: -10px; opacity: .3;}
+.ticket-sent-icon-zheng{width:88px;height:45px;background:  url(/frontend/images/template/icon.png) no-repeat;background-position:-104px -150px;position: absolute; bottom: 5px; left: -3px; opacity: .3}
+.ticket-sent-percentage{border: #f5f5f5 solid 1px; padding: 25px 15px;}
+.percentage{width: 100%; height: 5px; overflow: hidden; background: #ebebeb; position: relative;}
+.progress-bar{height: 100%; width: 0; max-width: 100%; background: #3598dc;}
+.ticket-terminal{margin-top: 20px;}
+.ticket-terminal span{color: #959595}
+.ticket-terminal:after{content: "";  display: block; clear: both;}
+
+.ticket-count{padding: 15px; border: #e6e6e6 solid 1px; margin: 10px 0;}
+.ticket-count span{color: #806F66}
+.ticket-count-poll{padding: 5px 15px; border-bottom: #d8d8d8 solid 1px; margin-bottom: 28px;}
+.ticket-count-poll li{color: #000; display: inline-block; margin: 10px 20px 10px 0; font-size: 13px;}
+.crumbAttr {padding-left: 0; margin-left: -10px}
+.crumbAttr li{color: #E50011; border: #E50011 dashed 1px; display: inline-block; height: 19px; padding: 0 5px; font-size: 12px; margin-right: 10px;}
+.crumbAttr li:hover{border-style: solid}
+.crumbAttr li a{color: #E50011}
+.crumbAttr li a:hover{text-decoration: none;}
+.crumbAttr li a.crumbDelete{width: 7px; height: 7px; display: inline-block; background: url(/frontend/images/template/icon.png) no-repeat; background-position:0 -122px; vertical-align: middle; position: relative; top: -1px; overflow: hidden;}
+.crumbAttr li a.crumbDelete:hover{transform: rotate(360deg);transition-duration:0.5;}
+.crumbAttr li.ResultsNumber{border: none; color: #555;}
+.crumbAttr li.ResultsNumber span{color: #E50011; font-weight: bold;}
+.ticket-search{border-bottom: #D1CCC7 solid 1px;border-top: #D1CCC7 solid 1px; margin: 10px 0 20px 0;}
+.ticket-attr{background-color: #F7F5F5; border-color: #E6E2E1 #E6E2E1 #D1CCC7; border-style: solid solid dotted; border-width: 0 1px 1px; font-family: arial; font-size: 13px; position: relative;}
+.ticket-attr:last-of-type{border-bottom: none; }
+.ticket-attrKey{/* width: 10%; */ padding: 18px 15px 0 15px; color: #806F66; /* float: left; */}
+.ticket-attrValues{/* width: 90%;  float: left;*/ background-color:#fff;}
+.ticket-attrlist{margin-left: 20px; padding: 10px 0; transition-duration: 300ms;}
+.ticket-attrlist li{width: 130px; height: 22px; line-height: 22px; margin: 5px 0; float: left;}
+.ticket-attrlist li a{color:#382A22; display: inline-block; transition: .2s;}
+.ticket-attrlist li a:hover{color: #E50011; text-decoration: none;}
+.av-options{position: absolute; top: 0; right: 0; background: #806F66; cursor: pointer;}
+.av-options a{color: #fff; padding: 5px;}
+.letter-nav{width: 100%; height: 60px; padding-left: 20px; border-bottom: #E6E2E1 solid 1px; margin-left: 0; display: none;}
+.letter-nav ul{padding-left: 0;}
+.letter-nav li{display: inline-block; padding-top: 22px;}
+.ticket-search-box{margin-top: 10px}
+#values{height: 50px; overflow: hidden;}
+#letter-search li a{padding: 2px 5px;}
+#letter-search li a:hover{background: #E50011; color: #fff; border-radius: 2px; text-decoration: none;}
+#letter-search li a:focus{background: #E50011; color: #fff; border-radius: 2px; text-decoration: none;}

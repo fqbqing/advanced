@@ -1,0 +1,216 @@
+.sola-send{
+	@include border;
+	margin-top: 15px;
+	.selectBox{
+		background-color: #f9fafb;
+		padding: 0 15px;
+	}
+}
+.sola-ticket {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 25px 0 0 0;
+    border-bottom: #ddd dashed 1px;
+    .sola-ticketBox {
+        height: 110px;
+        width: 266px;
+        color: #fff;
+        padding: 13px;
+        margin-right: 22px;
+        margin-bottom: 25px;
+        background-color: #c8c8c8;
+        cursor: pointer;
+        @include border(#c8c8c8, 2px);
+        h2,
+        h4,
+        p {
+            color: #fff;
+        }
+        i {
+            position: absolute;
+            font-size: 48px;
+            right: 15px;
+            top: 10px;
+        }
+    }
+    .sola-ticketBox.active {
+        background-color: #1288da;
+        @include border(#1288da, 2px);
+    }
+    .sola-ticketBox:hover {
+        background-color: #fff;
+        color: #1288da;
+        @include border(#1288da, 2px);
+        h2,
+        h4,
+        p {
+            color: #1288da;
+        }
+    }
+}
+
+
+
+
+.log-record{
+	height: 500px;
+	padding: 20px;
+	margin-top: 10px;
+	overflow-y:auto;
+}
+
+.ticketTemplateBox{
+	padding: 20px;
+	background-color: #f9fafb;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	.ticketTemplate{
+		width: 220px;
+		height: 196px;
+		margin: 15px;
+		@include border(#afafaf);
+		background-color: #fff;
+		cursor: pointer;
+		.ticketTemplateTop{
+			background-color: #dddcda;
+			padding: 25px 25px 0 25px;
+			height: 150px;
+			.ticketTemplateHead{
+				height: 28px;
+				background-color: #333;
+				position: relative;
+			}
+			.ticketTemplateHead:after{
+				content: '';
+				width: 120px;
+				height: 6px;
+				background-color: #fff;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3D(-50%,-50%,0);
+			}
+			.ticketTemplateImg{
+				height: 97px;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+		.ticketTemplateText{
+			text-align: center;
+			line-height: 46px;
+		}
+	}
+	.ticketTemplate.active{
+		@include border(#078ac9);
+		.ticketTemplateTop{
+			background-color: #078ac9;
+			.ticketTemplateHead{
+				background-color: #085998;
+			}
+		}
+		.ticketTemplateText{
+			color: #078ac9;
+		}
+	}
+
+}
+
+.replenish{
+	margin: 20px 0;
+	height: 60px;
+	background-color: #fafbfb;
+	border-radius: 2px;
+	padding: 0 20px;
+	.row{
+		[class*="col-"]{
+			height: 60px;
+			.radio{
+				margin-top:20px; 
+			}
+			input{
+				margin-top: 18px;
+			}
+			button{
+				margin-top: 13px;
+			}
+		}
+	}
+}
+
+.batch-record-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.batch-selectTicket{
+	@include border;
+	padding: 10px 20px;
+	.batch-selectTicket-list{
+		border-bottom: #ddd dashed 1px;
+		padding: 20px 0;
+		.ticketname{
+			width: 133px;
+			height: 50px;
+			color: #fe3333;
+			text-align: center;
+			line-height: 50px;
+			display: inline-block;
+			background: url(../../images/batchTicket.png) no-repeat;
+		}
+	}
+	.batch-selectTicket-list:last-of-type{
+		border: none;
+	}
+}
+
+
+.locus{
+	width: 120px;
+	text-align: center;
+	padding: 4px 0;
+	background-color: #bdbdbd;
+	margin: 30px 0 20px 0;
+	border-radius: 30px;
+	color: #fff;
+}
+
+
+/* 票面设置 */
+.par-set-box{
+	background-color: #f9fafb;
+	padding: 20px 10px 0 10px;
+	margin-top: 20px;
+	display: flex;
+	justify-content:space-between;
+	// align-items:stretch;
+	.par-set{
+		background-color: #fff;
+		margin: 0 10px;
+	}
+}
+
+.e-ticket{
+	margin: 10px;
+	@include border(#dbdbdb);
+	padding: 5px;
+	.e-ticket-info{
+		padding: 10px ;
+		border-bottom: #e9e9e9 dashed 1px;
+		.ticket-ad{
+			height: 170px;
+			margin: 10px 0;
+			background-color: #f5f5f5;
+		}
+	}
+	.e-ticket-info:last-of-type{
+		border: none;
+	}
+	.e-ticket-infoFlex{
+		display: flex;
+		justify-content:space-between;
+	}
+}
+

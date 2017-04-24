@@ -1,0 +1,470 @@
+/* 公用定位参数 */
+@mixin position($top:50%,$left: 50%,$translate3D:translate3D(-50%,-50%,0)){
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: $translate3D;
+}
+/* 描边 */
+@mixin border($bg:#ddd, $size:1px){
+	border: $bg solid $size;
+}
+
+
+
+
+ol{
+	-webkit-padding-start: 15px;
+}
+ol, ul{
+	list-style: none;
+	margin-bottom: 0;
+	-webkit-padding-start: 0;
+}
+
+/* 模板修改 */
+
+.topbar .topbar-left{
+	background-color: #fff;
+	height: 65px;
+	width: 220px;
+}
+.logo, .logo-sm{
+	line-height: 65px;
+}
+.navbar-default{
+	font-size: 12px;
+}
+.button-menu-mobile{
+	font-size: 18px;
+	border: none;
+	height: 65px;
+	width: 65px;
+	margin-top: 0;
+	margin-left: 0;
+	border-radius: none;
+	display: inline-block;
+}
+
+.navbar .pull-left{
+	line-height: 64px;
+	margin: 0 5px;
+	text-align: center;
+}
+.navbarLink{
+	height: 65px;
+	width: 100px;
+	color: #434343;
+}
+.navbarLink:hover{
+	background-color: #e8e8e8;
+	color: #434343;
+}
+.navbarSelect{
+	margin-top: 14px;
+	min-width: 300px;
+	border: #e8e8e8 solid 1px !important;
+	background: #fff;
+	color: #555;
+	border-radius: 2px !important;
+}
+.navbar-nav>li{
+	line-height: 65px;
+	height: 65px;
+	position: relative;
+	margin: 0 5px;
+}
+.navbar-default .nav > li > a{
+	display: inline-block;
+	padding: 0 ;
+}
+.navbar-default .nav > li > a i{
+	font-size: 12px;
+}
+.operation-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+
+.side-menu{
+	width: 220px;
+}
+.side-menu.left{
+	top: 65px;
+	background: #262b33;
+}
+#sidebar-menu{
+	background-color: #262b33;
+}
+#sidebar-menu > ul > li > a{
+	color: #929598;
+	background-color: #262b33;
+}
+
+.footer{
+	left: 220px;
+}
+
+
+.panel{
+	.panel-body{
+		padding: 25px 50px;
+		h4{
+			position: relative;
+		}
+	}
+}
+
+.form-horizontal .form-group{
+	margin-right: -10px;
+	margin-left: -10px;
+}
+.form-control{
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 0;
+	border: none;
+	border-bottom: #ddd solid 1px;
+}
+
+.form-horizontal {
+	.form-group{
+		margin-bottom: 30px;
+	}
+} 
+
+.tableBox{
+	@include border;
+	thead{
+		tr{
+			th{
+				padding: 20px 8px;
+				background-color: #fafbfb;
+			}
+		}
+	}
+}
+
+.input-group .form-control{
+	border-color: #eee;
+}
+
+
+//插件默认值修改
+.input-daterange input{
+	text-align: left !important;
+}
+.input-group-addon{
+	background-color: #fff !important;
+}
+
+
+
+//按钮
+.botton-sm{
+	border-radius: 30px;
+	padding: 3px 12px;
+	color: #078ac9;
+	border: #078ac9 solid 1px;
+	background: #fff;
+	font-size: 12px;
+}
+.botton-sm:active{
+	color: #fff;
+	background: #078ac9;
+}
+.botton-sm:hover{
+	color: #fff;
+	background: #078ac9;
+}
+
+//开关按钮
+.switchBox {
+    width: 50px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.switchBox input {
+    display: none;
+}
+.switch {
+    display: none;
+}
+.switch + label {
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    background: #dcdcdc;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.switch + label:before {
+    content: ' ';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: #FFF;
+    top: 1px;
+    z-index: 99999;
+    left: 1px;
+    color: #FFF;
+    border-radius: 18px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+    transition: all .5s ease;
+}
+.switch + label:after {
+    content: '';
+    position: absolute;
+    font-size: 12px;
+    color: white;
+    line-height: 20px;
+}
+.switch:checked + label {
+    background: #0096d4;
+}
+
+.switch:checked + label:after {
+    content: '';
+    left: 1rem;
+}
+
+.switch:checked + label:before {
+    content: ' ';
+    position: absolute;
+    z-index: 999;
+    left: 31px;
+}
+.switch + label:after {
+    right: 1rem;
+}
+
+
+
+// 带边框的input
+.line-input{
+	height: 30px;
+	border-radius: 2px;
+	@include border;
+}
+
+
+//带文字的radio
+.radioTextBox {
+    float: left;
+    margin-right: 20px;
+}
+.radioTextBox input {
+    display: none;
+}
+.radioText {
+    display: none;
+}
+.radioText + label {
+    padding: 8px 40px;
+    display: inline-block;
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 2px;
+    border: 1px solid #cfcfcf;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: center;
+}
+.radioText:checked + label {
+    background: #fff;
+    color: #1a7fc6;
+    border: 1px solid #1a7fc6;
+}
+.radioText:checked + label:after {
+	font-family:"iconfont" !important;
+    content: "\e65b";
+    font-size: 20px;
+    position: absolute;
+    right: -2px;
+    bottom: -8px;
+    z-index: 1;
+}
+
+
+
+// 下描边
+.solid-bottom{
+	border-bottom: #f1f5f8 solid 1px;
+}
+//虚线
+.line-dashed{
+	border-top: 1px dashed #ddd;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    margin: 10px 0;
+}
+
+
+// div等高
+.box-stretch{
+	display: flex;
+	flex-wrap: nowrap ;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+
+// flex
+.flex-left{
+	display: flex;
+	justify-content: flex-start;
+}
+
+//背景色
+.bg-mazarine{
+	background-color: #2773eb !important;//深蓝色
+}
+.bg-wathet{
+	background-color: #23c1ff !important;//浅蓝色
+}
+.bg-blue{
+	background-color: #4f96f6 !important;//蓝色
+}
+.bg-violet{
+	background-color: #8b6aff !important;//紫色
+}
+.bg-green{
+	background-color: #05b894 !important;//绿色
+}
+.bg-orange{
+	background-color: #ff7a1f !important;//橙色
+}
+.bg-red{
+	background-color: #f7445d !important;//红色
+}
+.bg-pink{
+	background-color: #f34094 !important;//粉红色
+}
+.bg-yellow{
+	background-color: #f2b717 !important;//黄色
+}
+
+
+.row.no-gutter{
+	margin: 0;
+}
+.row.no-gutter > [class*="col-"]{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+// 日期图标定位
+.dateicon{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	z-index: 3;
+	color: #949494;
+}
+
+
+// 查询模块
+.searchBox{
+	margin-top: 30px;
+	padding: 40px 20px 20px 15px;
+	@include border;
+}
+
+//切换标题
+.tabTitle{
+	border-bottom: #f1f5f8 solid 2px;
+	padding-bottom: 10px;
+	a{
+		width: 90px;
+		display: inline-block;
+		text-align: center;
+		position: relative;
+	}
+	a:after{
+		content: '';
+		display: block;
+		width: 1px;
+		height: 16px;
+		background-color: #f1f5f8;
+		position: absolute;
+		top: 15px;
+		right: -3px;
+	}
+	a:last-of-type:after{
+		display: none;
+	}
+	a.active{
+		h4{
+			color: #078ac9;
+		}
+	}
+	a.active:before{
+		content: '';
+		display: block;
+		width: 90px;
+		height: 2px;
+		background-color: #078ac9;
+		position: absolute;
+		bottom: -12px;
+		left: 0;
+	}
+}
+
+
+/* 标注 */
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9fafb;
+  border-left: 3px solid #ddd;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  border-radius: 3px;
+}
+
+/* Tighten up space between multiple callouts */
+.bs-callout + .bs-callout {
+  margin-top: -5px;
+}
+
+/* Variations */
+.bs-callout-danger {
+  border-left-color: #ce4844;
+}
+.bs-callout-danger h4 {
+  color: #ce4844;
+}
+.bs-callout-warning {
+  border-left-color: #aa6708;
+}
+.bs-callout-warning h4 {
+  color: #aa6708;
+}
+.bs-callout-info {
+  border-left-color: #078ac9;
+}
+.bs-callout-info h4 {
+  color: #078ac9;
+}
+
+
+@import "home"; //首页样式
+@import "ticket"; //票证样式
+@import "oldstyle"; //老的样式

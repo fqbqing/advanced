@@ -16,4 +16,7 @@ return [
     'post' => [
         'class' => 'backend\modules\post\Module',
     ],
+    'rbac' => [
+        'class' => 'backend\modules\rbac\Module',
+    ],
 ];

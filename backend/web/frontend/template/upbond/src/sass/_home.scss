@@ -1,0 +1,101 @@
+.admin-widget .col-sm-3{
+	position: relative;
+	padding-left: 30px;
+}
+.admin-widget .col-sm-3:after{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 70px;
+	background: #f1f5f8;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate3D(0, -30%, 0);
+}
+.admin-widget .col-sm-3:first-of-type{
+	padding-left: 10px;
+}
+.admin-widget .col-sm-3:first-of-type:after{
+	display: none;
+}
+.admin-widget .col-sm-3:last-of-type:after{
+	display: none;
+}
+.admin-widget-avatar{
+	width: 92px;
+	height: 92px;
+	border-radius: 4px;
+	overflow: hidden;
+	text-align: center;
+	display: inline-block;
+	img{
+		width: 100%;
+	}
+}
+.admin-widget-info{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	.identifying{
+		padding: 3px 5px;
+		background: #ff5958;
+		border-radius: 4px;
+		color: #fff;
+		font-size: 16px;
+	}
+}
+.admin-widget-identity{
+	color: #c4c5c7;
+	font-size: 16px;
+	span{
+		padding-right: 20px;
+		i{
+			font-size: 18px;
+			vertical-align: middle;
+		}
+	}
+}
+
+.chartHeigt{
+	max-height: 450px;
+}
+.entrance{
+	text-align: center;
+	a{
+		margin-top: 20px;
+		img{
+			width: 100%;
+		}
+	}
+	
+}
+
+.smarty-icon{
+	width: 98px;
+	height: 136px;
+	display: inline-block;
+	.iconBox{
+		width: 98px;
+		height: 98px;
+		background: #2773eb;
+		border-radius: 30px;
+		color: #fff;
+		font-size: 46px;
+		position: relative;
+		i{
+			@include position;
+		}
+	}
+	button{
+		margin: 10px 0 0 10px;
+	}
+}
+.smarty-text{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 30px;
+	span{
+		color: #666;
+	}
+}

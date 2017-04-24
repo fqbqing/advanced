@@ -1,0 +1,91 @@
+.topbar .topbar-left{
+	background-color: #fff;
+	height: 65px;
+	width: 220px;
+}
+.logo, .logo-sm{
+	line-height: 65px;
+}
+.navbar-default{
+	font-size: 12px;
+}
+.button-menu-mobile{
+	font-size: 18px;
+	border: none;
+	height: 65px;
+	width: 65px;
+	margin-top: 0;
+	margin-left: 0;
+	border-radius: none;
+	display: inline-block;
+}
+
+.navbar .pull-left{
+	line-height: 64px;
+	margin: 0 5px;
+	text-align: center;
+}
+.navbarLink{
+	height: 65px;
+	width: 100px;
+	color: #434343;
+}
+.navbarLink:hover{
+	background-color: #e8e8e8;
+	color: #434343;
+}
+.navbarSelect{
+	margin-top: 14px;
+	min-width: 300px;
+}
+.navbar-nav>li{
+	line-height: 65px;
+	height: 65px;
+	position: relative;
+	margin: 0 5px;
+}
+.navbar-default .nav > li > a{
+	display: inline-block;
+	padding: 0 ;
+}
+.navbar-default .nav > li > a i{
+	font-size: 12px;
+}
+.operation-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+
+.side-menu{
+	width: 220px;
+}
+.side-menu.left{
+	top: 65px;
+	background: #262b33;
+}
+#sidebar-menu{
+	background-color: #262b33;
+}
+#sidebar-menu > ul > li > a{
+	color: #929598;
+	background-color: #262b33;
+}
+
+.footer{
+	left: 220px;
+}
+
+
+
+/* 首页 */
+.admin-widget-avatar{
+	width: 92px;
+	height: 92px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+

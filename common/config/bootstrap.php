@@ -5,6 +5,7 @@ Yii::setAlias('@frontend', dirname(dirname(__DIR__)) . '/frontend');
 Yii::setAlias('@backend', dirname(dirname(__DIR__)) . '/backend');
 Yii::setAlias('@console', dirname(dirname(__DIR__)) . '/console');
 Yii::setAlias('@rest', dirname(dirname(__DIR__)) . '/rest');
+Yii::setAlias('rbac', '@backend/modules/rbac');
 
 Yii::setAlias('storagePath', '@root/storage');
 Yii::setAlias('storageUrl', 'http://advanced.dev.com/storage');
