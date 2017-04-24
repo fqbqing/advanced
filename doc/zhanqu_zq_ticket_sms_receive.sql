@@ -1,9 +1,0 @@
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (145, 27278, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (146, 23479, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (138, 27301, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (148, 27278, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (144, 27278, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (146, 27278, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (150, 27302, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (137, 27279, null);
-INSERT INTO zhanqu.zq_ticket_sms_receive (exhibition_id, member_id, status) VALUES (154, 27278, null);

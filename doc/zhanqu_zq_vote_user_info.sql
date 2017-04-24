@@ -1,2 +1,0 @@
-INSERT INTO zhanqu.zq_vote_user_info (uname, mobile, page_id, vote_uuid, vote_time) VALUES ('gzp', '13707174435', 1, '39d4e149-68f6-4f7d-1053-d3280bf07552', '2015-12-23 21:52:14');
-INSERT INTO zhanqu.zq_vote_user_info (uname, mobile, page_id, vote_uuid, vote_time) VALUES ('gzp', '13707174435', 1, '39d4e149-a8da-72d9-5360-ee9443ed76dd', '2015-12-23 21:52:30');

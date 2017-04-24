@@ -1,2 +1,0 @@
-INSERT INTO zhanqu.zq_wechat_promotion_total (scene, openid, create_time) VALUES ('d4f518ad08304d55d092', 'ddad', '2017-04-14 14:51:05');
-INSERT INTO zhanqu.zq_wechat_promotion_total (scene, openid, create_time) VALUES ('0b3e0cde1b85d0c7f32b', '23', '2017-04-14 14:57:02');

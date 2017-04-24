@@ -1,1 +1,0 @@
-INSERT INTO zhanqu.zq_disable_logs (disable_uid, disable_date_time, activity_item, exhibition_id, user_name, user_mobile, disable_amount, roles, disable_type, ticket_type_name, company) VALUES (52, '2016-11-21 11:05:26', '550', 152, '黄花', '15633332226', 1, '发票员', 1, '', '测试数值');

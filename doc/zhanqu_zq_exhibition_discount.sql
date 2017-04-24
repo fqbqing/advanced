@@ -1,2 +1,0 @@
-INSERT INTO zhanqu.zq_exhibition_discount (exhibition_id, cat, title, start_time, end_time, discount_price, amount_limit) VALUES (1, 0, 'Exhibition#1 discount', '2015-09-01 01:01:02', '2016-09-01 01:01:02', 100, 1000);
-INSERT INTO zhanqu.zq_exhibition_discount (exhibition_id, cat, title, start_time, end_time, discount_price, amount_limit) VALUES (2, 0, 'Exhibition#2 discount', '2015-09-01 01:01:02', '2016-09-01 01:01:02', 200, 2000);

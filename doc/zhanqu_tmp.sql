@@ -1,1 +1,0 @@
-INSERT INTO zhanqu.tmp (id, username, mobile, email, password, auth_key, access_token, enabled, flag, alias, avatar, pwd, created_at, updated_at, office, openid, last_login_time, last_login_ip, uuid, user_identity) VALUES (0, '', 0.01, '', '', '', '', 1, null, null, null, null, null, null, null, null, null, null, null, 0);
