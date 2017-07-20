@@ -37,7 +37,7 @@ class User extends ActiveRecord implements IdentityInterface
     public static function tableName()
     {
        // return '{{%user}}';
-        return 'zq_member';
+        return 'zt_user';
     }
 
     /**
@@ -159,7 +159,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password);
+        return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
     /**
